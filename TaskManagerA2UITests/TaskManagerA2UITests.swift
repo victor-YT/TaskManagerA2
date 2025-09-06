@@ -2,6 +2,7 @@ import XCTest
 
 final class TaskManagerA2UITests: XCTestCase {
 
+    /// Verify that the user can add a new task through the UI
     func testAddTaskFlow() {
         let app = XCUIApplication()
         app.launch()
