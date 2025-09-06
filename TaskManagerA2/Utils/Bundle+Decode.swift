@@ -1,5 +1,8 @@
 import Foundation
 
+/// Convenience JSON loader.
+/// - Parameter file: The resource file name inside the main bundle.
+/// - Returns: A decoded model of type `T`.
 extension Bundle {
     /// Decode JSON from the main bundle (common classroom pattern)
     func decode<T: Decodable>(_ file: String,

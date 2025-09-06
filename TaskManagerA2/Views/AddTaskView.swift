@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// Form for creating a new task. Validation errors are shown locally via alert,
+/// while successful saves dismiss the sheet asynchronously to avoid SwiftUI warnings.
 struct AddTaskView: View {
     @EnvironmentObject var vm: TaskListViewModel
     @Environment(\.dismiss) private var dismiss
