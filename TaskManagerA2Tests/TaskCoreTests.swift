@@ -27,7 +27,7 @@ final class TaskCoreTests: XCTestCase {
 
     func testDaysRemainingStable() {
         let due = Calendar.current.date(byAdding: .day, value: 2, to: Date())!
-        var t = Task(title: "D-Day", dueDate: due)
+        let t = Task(title: "D-Day", dueDate: due)
 
         XCTAssertNotNil(t.daysRemaining)
         XCTAssertGreaterThanOrEqual(t.daysRemaining ?? -99, 0)
