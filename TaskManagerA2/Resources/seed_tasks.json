@@ -6,7 +6,7 @@
     "isDone": false,
     "dueDate": "2025-09-10T00:00:00Z",
     "priority": 2,
-    "category": "personal"
+    "category": "work"
   },
   {
     "id": "5A1D8F2C-8B52-4A5D-9B69-0E9B3F8E0E33",
@@ -24,6 +24,6 @@
     "isDone": true,
     "dueDate": null,
     "priority": 0,
-    "category": "personal"
+    "category": "shopping"
   }
 ]

@@ -1,12 +1,32 @@
 import Foundation
 
-enum TaskCategory: String, Codable, CaseIterable {
+
+enum TaskCategory: String, Codable, CaseIterable, Identifiable {
     case personal
     case work
     case shopping
     case others
-}
 
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .personal: return "presonal"
+        case .work:     return "work"
+        case .shopping: return "shopping"
+        case .others:   return "others"
+        }
+    }
+
+    var emoji: String {
+        switch self {
+        case .personal: return "👤"
+        case .work:     return "💼"
+        case .shopping: return "🛒"
+        case .others:   return "📌"
+        }
+    }
+}
 struct Task: TaskProtocol, Schedulable {
     let id: UUID
     var title: String

@@ -27,13 +27,24 @@ final class TaskListViewModel: ObservableObject {
     }
 
     /// Now throws errors to the caller (handled in AddTaskView to display alerts)
-    func addTask(title: String, notes: String?, dueDate: Date?, priority: Priority) throws {
-        var t = Task(title: title, notes: notes, dueDate: dueDate, priority: priority)
+    func addTask(title: String,
+                 notes: String?,
+                 dueDate: Date?,
+                 priority: Priority,
+                 category: TaskCategory = .personal) throws {
+        let t = Task(
+            title: title,
+            notes: notes,
+            isDone: false,
+            dueDate: dueDate,
+            priority: priority,
+            category: category
+        )
         try t.validate()
         tasks.insert(t, at: 0)
         tasks = sortTasks(tasks)
     }
-
+    
     func remove(at offsets: IndexSet) { tasks.remove(atOffsets: offsets) }
     func move(from source: IndexSet, to destination: Int) { tasks.move(fromOffsets: source, toOffset: destination) }
 

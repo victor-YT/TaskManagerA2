@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 // Base task protocol (data + basic behavior)
 protocol TaskProtocol: Identifiable, Codable, Equatable {
@@ -39,6 +40,13 @@ enum Priority: Int, Codable, CaseIterable, Identifiable {
         case .low: return "Low"
         case .medium: return "Medium"
         case .high: return "High"
+        }
+    }
+    var color: Color {
+        switch self {
+        case .low: return .green
+        case .medium: return .yellow
+        case .high: return .red
         }
     }
 }

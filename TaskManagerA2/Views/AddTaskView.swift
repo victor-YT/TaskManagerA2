@@ -9,6 +9,7 @@ struct AddTaskView: View {
     @State private var hasDueDate: Bool = true
     @State private var dueDate: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
     @State private var priority: Priority = .medium
+    @State private var category: TaskCategory = .personal
 
     @State private var alertMessage: String?
 
@@ -31,6 +32,15 @@ struct AddTaskView: View {
                             Text(p.label).tag(p)
                         }
                     }
+                    
+                    Section("Category") {
+                        Picker("Category", selection: $category) {
+                            ForEach(TaskCategory.allCases, id: \.self) { c in
+                                Text(c.emoji + " " + c.rawValue.capitalized).tag(c)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                    }
 
                     TextField("Notes (Optional)", text: $notes)
                 }
@@ -47,7 +57,8 @@ struct AddTaskView: View {
                                 title: title,
                                 notes: notes.isEmpty ? nil : notes,
                                 dueDate: hasDueDate ? dueDate : nil,
-                                priority: priority
+                                priority: priority,
+                                category: category
                             )
                             // Dismiss asynchronously after success to avoid “Publishing changes…” warning
                             DispatchQueue.main.async { dismiss() }
