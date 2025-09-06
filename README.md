@@ -1,7 +1,7 @@
 # 📱 TaskManagerA2
 
 A minimalist iOS task management app built with **SwiftUI** and the **MVVM architecture**.
-This project was created as part of my iOS development assignment (A2), simulating a real-world app development workflow.
+This project was created as part of my iOS development assignment, simulating a real-world app development workflow.
 
 ---
 
@@ -37,40 +37,26 @@ The project includes both **Unit Tests** and **UI Tests**:
 - `testToggleDone()` → verifies toggling task completion
 - `testValidation_EmptyTitle()` → ensures empty titles throw `AppError.emptyTitle`
 - `testDaysRemainingStable()` → ensures due date calculation is valid
+- `testAddTaskSuccessIncreasesCount()` → verifies that successfully adding a task increases the task list count
+- `testOverdueDaysNegative()` → ensures that overdue tasks report negative remaining days
 
 ### 🎭 UI Tests (`TaskManagerA2UITests`)
-- `testAddTaskFlow()` → simulates adding a new task via the UI
+- `testAddTaskFlow()` → simulates adding a new task via the UI and checks that it appears in the list
 
 Run all tests in **Xcode → Product → Test (⌘U)**.
 
 ---
 
-## 📂 Project Structure
-TaskManagerA2
-├── Models/          # Data models (Task, AppError, TaskCategory)
-├── Protocols/       # Protocol definitions
-├── Resources/       # Seed JSON data
-├── Utils/           # Utility extensions
-├── ViewModels/      # TaskListViewModel
-├── Views/           # SwiftUI views
-├── Assets.xcassets/ # App icons & assets
-├── TaskManagerA2App.swift
-├── Tests/
-│   ├── TaskCoreTests.swift
-│   └── TaskManagerA2UITests.swift
-└── README.md
-
----
-
 ## 📸 Screenshots
 
-### Task List Example
 
 ---
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/victor-YT/TaskManagerA2.git
+    ```bash
+    git clone https://github.com/victor-YT/TaskManagerA2.git
 
+2. Open in Xcode:
+    open TaskManagerA2.xcodeproj
