@@ -1,5 +1,12 @@
 import Foundation
 
+enum TaskCategory: String, Codable, CaseIterable {
+    case personal
+    case work
+    case shopping
+    case others
+}
+
 struct Task: TaskProtocol, Schedulable {
     let id: UUID
     var title: String
