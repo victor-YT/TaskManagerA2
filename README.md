@@ -49,9 +49,9 @@ Run all tests in **Xcode → Product → Test (⌘U)**.
 
 ## 📸 Screenshots
 <p lign="center">
-    <img width="320" alt="Simulator Screenshot - iPhone 16 Pro Max - 2025-09-07 at 04 32 03" src="https://github.com/user-attachments/assets/03d8ea80-213c-4b34-b7bd-afa64ed1597b" />
-    <img width="320" alt="New Task" src="https://github.com/user-attachments/assets/08e6b363-06e6-44cb-abb3-4c2baac40af6" />
-    <img width="320" alt="simulator_screenshot_17F76605-DBA3-47E0-977C-D313C5E5E217" src="https://github.com/user-attachments/assets/106fbb9d-5192-4527-b86b-a19aa929f057" />
+    <img width="33%" alt="Simulator Screenshot - iPhone 16 Pro Max - 2025-09-07 at 04 32 03" src="https://github.com/user-attachments/assets/03d8ea80-213c-4b34-b7bd-afa64ed1597b" />
+    <img width="33%" alt="New Task" src="https://github.com/user-attachments/assets/08e6b363-06e6-44cb-abb3-4c2baac40af6" />
+    <img width="33%" alt="simulator_screenshot_17F76605-DBA3-47E0-977C-D313C5E5E217" src="https://github.com/user-attachments/assets/106fbb9d-5192-4527-b86b-a19aa929f057" />
 </p>
 
 ---
