@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TaskManagerA2App: App {
+    @StateObject private var vm = TaskListViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(vm)
         }
     }
 }
