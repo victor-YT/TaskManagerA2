@@ -1,0 +1,29 @@
+[
+  {
+    "id": "B8E4A2F3-91C0-4B22-9E32-1F7A6B5D55A1",
+    "title": "finish iOS A2",
+    "notes": "get hd",
+    "isDone": false,
+    "dueDate": "2025-09-10T00:00:00Z",
+    "priority": 2,
+    "category": "personal"
+  },
+  {
+    "id": "5A1D8F2C-8B52-4A5D-9B69-0E9B3F8E0E33",
+    "title": "gym 30 mins",
+    "notes": null,
+    "isDone": false,
+    "dueDate": "2025-09-08T00:00:00Z",
+    "priority": 1,
+    "category": "personal"
+  },
+  {
+    "id": "0E5FDF3B-2A4C-42E9-8D95-8EE19F4111A7",
+    "title": "go to coles",
+    "notes": "buy chicken, tomato and potato",
+    "isDone": true,
+    "dueDate": null,
+    "priority": 0,
+    "category": "personal"
+  }
+]
