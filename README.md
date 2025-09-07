@@ -29,6 +29,26 @@ The app follows the **MVVM (Model-View-ViewModel)** pattern:
 
 ---
 
+## 🧩 Design Notes (OOP & POP)
+
+This project intentionally demonstrates both **Object-Oriented Programming (OOP)** and **Protocol-Oriented Programming (POP)** concepts:
+
+- **OOP**
+  - `TaskListViewModel` is a `class` that encapsulates state (`tasks`) and business logic (add, remove, toggle, update).
+  - `Task` is a `struct` that models individual tasks with properties and methods (`toggleDone`, `validate`).
+  - `AppError` enum centralizes error handling and integrates with SwiftUI alerts.
+  - Composition is applied: the ViewModel manages an array of Task objects, separating concerns between data and UI.
+
+- **POP**
+  - `TaskProtocol` defines the core contract of a task (id, title, notes, isDone, validation).
+  - `Schedulable` protocol + extension provides reusable date-related logic (`daysRemaining`, `isOverdue`).
+  - `Priority` and `TaskCategory` enums adopt `CaseIterable` and `Identifiable` to integrate smoothly with SwiftUI pickers.
+  - Protocol extensions demonstrate code reuse across conforming types without inheritance.
+
+Together, these patterns show a balance of OOP for state management and POP for modular, reusable behaviors.
+
+---
+
 ## 🧪 Testing
 
 The project includes both **Unit Tests** and **UI Tests**:
